@@ -80,6 +80,8 @@ Description – README.md
 
 Begin by cloning this repo.
 
+#### Obs: This project uses pyton 3.11, and was first developed a linux enviroment
+
 ### Setting up the project
 
 In the project root directory run
