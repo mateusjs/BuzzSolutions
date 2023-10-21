@@ -104,7 +104,9 @@ make populate
 
 ### Running the tests
 
-The test suite can be run with
+The test cases can be runned with
+
+**Obs: if your tests are not running, stop the docker and delete `mysql_data` directory**
 
 ```
 make test 
@@ -115,6 +117,8 @@ or
 ```
 make test-coverage
 ```
+
+
 
 ### Starting the application
 
