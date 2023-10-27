@@ -3,7 +3,7 @@ from typing import List, Union
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from app.api.repository.geoname_repository import GeoNameRepository
+from app.api.repository.geoname_repository import GeoNameFilter
 from app.api.services.rate_suggestions import RateSuggestions
 from app.core.database import get_db
 from app.models.geolocation import GeoLocation
@@ -26,7 +26,7 @@ async def get_suggestions(
         latitude = float(latitude) if latitude else None
         longitude = float(longitude) if longitude else None
 
-        geoname_repo = GeoNameRepository(db)
+        geoname_repo = GeoNameFilter(db)
 
         filters = {"q": q, "latitude": latitude, "longitude": longitude}
         geonames = geoname_repo.filter_geonames(**filters)
